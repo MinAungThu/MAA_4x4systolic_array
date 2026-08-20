@@ -32,13 +32,9 @@ using an R×C grid of processing elements (PEs). If K>R or N>C, the host divides
 
 Tiling and accumulation are currently handled on the host. A real implementation would need an on-chip controller for this, that RTL is not implemented yet.
 
-2. Weight-stationary dataflow
+## Weight-stationary dataflow
 
-
-
-
-
-
+```
             west (activations, skewed: row r delayed r cycles)
             │
    X[*,0] ─►┌─────┬─────┬─────┐
@@ -47,6 +43,7 @@ Tiling and accumulation are currently handled on the host. A real implementation
             └──┬──┴──┬──┴──┬──┘   a flows east, psum flows south
                ▼     ▼     ▼
              Y[*,0] Y[*,1] Y[*,2]   (south edge, de-skewed)
+```
              
 Weights are loaded into all PEs in parallel with one load_w pulse and then remain stationary.
 Activations enter from the west and propagate east. The input rows are skewed so that the required operands reach each PE at the correct cycle.

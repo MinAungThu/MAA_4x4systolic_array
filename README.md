@@ -51,7 +51,9 @@ Partial sums propagate from north to south, with the completed results appearing
 This allows the same weight values to be reused while multiple activation rows pass through the array.
 
 
+**Example Calculation is shown below**
 ![The example calculation is shown here.](documents/explanation.png)
+
 
 ---
 

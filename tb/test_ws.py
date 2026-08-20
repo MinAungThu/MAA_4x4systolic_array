@@ -1,10 +1,3 @@
-"""test_ws.py -- verify array_ws against the cycle model and numpy golden.
-
-Strategy: drive the skewed activation schedule the funcsim defines, capture the
-south-edge each cycle, then (a) match the RTL south trace to funcsim's expected
-trace up to a constant pipeline offset, and (b) reconstruct Y and compare to the
-numpy integer golden.
-"""
 import os, sys
 import numpy as np
 import cocotb

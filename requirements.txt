@@ -1,0 +1,5 @@
+numpy>=1.24
+cocotb>=2.0
+# RTL simulation needs Icarus Verilog (iverilog >= 12) on the system:
+#   apt-get install iverilog
+# Physical design needs OpenLane + Sky130 (Docker/Nix) -- see pd/OPENLANE_RUNBOOK.md
